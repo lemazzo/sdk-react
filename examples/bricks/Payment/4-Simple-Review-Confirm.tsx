@@ -40,7 +40,7 @@ const App = () => {
     paymentMethods: {
       atm: 'all',
       ticket: 'all',
-      bankTransfer: ['pix'], // todo: 'all' doesn't works
+      bankTransfer: ['pix'],
       debitCard: 'all',
       mercadoPago: 'all',
     },
@@ -50,23 +50,12 @@ const App = () => {
     console.log(param);
   }
 
-  // todo: remove onError
-  const onError = async (error) => {
-    console.log(error);
-  };
-
-  // todo: remove onReady
-  const onReady = async () => {
-    console.log('onready');
-  };
 
   return (
     <Payment
       initialization={initialization}
       customization={customization}
       onSubmit={onSubmit}
-      onReady={onReady}
-      onError={onError}
     />
   );
 };
