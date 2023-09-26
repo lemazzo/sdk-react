@@ -106,14 +106,10 @@ export interface IReviewConfirmBilling {
   lastName?: string;
   taxRegime?: string;
   taxIdentificationNumber: string;
-  identification?: IIidentification;
+  identification?: IPayerIdentification;
   billingAddress?: IBillingAddress;
 }
 
-export interface IIidentification {
-  type: string;
-  number: string;
-}
 export interface IBillingAddress {
   streetName: string,
   streetNumber: string,
