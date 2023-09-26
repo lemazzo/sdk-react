@@ -8,7 +8,6 @@ initMercadoPago('TEST-d198443d-7e9f-4e5f-a770-e5b23ae627cb', { locale: 'es-MX' }
 const App = () => {
   const initialization = {
     amount: 1000,
-    preferenceId: '',
     items: {
       totalItemsAmount: 1000,
       itemsList: [

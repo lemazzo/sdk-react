@@ -8,7 +8,7 @@ initMercadoPago('TEST-d198443d-7e9f-4e5f-a770-e5b23ae627cb', { locale: 'es-MX' }
 const App = () => {
   const initialization = {
     amount: 76.98, // result of = totalItemsAmount - costs (shipping) + totalDiscountsAmount
-    preferenceId: '1283129650-38f60f5f-08b3-48d3-928b-43689cd41240',
+    preferenceId: '',
     items: {
       totalItemsAmount: 81.98, //sum of all items in the list = (5 x 10.00) + (1 x 15.99) + (1 x 15.99)
       itemsList: [
@@ -102,7 +102,7 @@ const App = () => {
 
   const onRenderNextStep = (currentStep: string) => console.log('Calling onRenderNextStep...', currentStep);
 
-  const onRenderPreviousStep = (currentStep: string) => console.log('Calling onRenderNextStep...', currentStep);
+  const onRenderPreviousStep = (currentStep: string) => console.log('Calling onRenderPreviousStep...', currentStep);
 
   return (
     <Payment
