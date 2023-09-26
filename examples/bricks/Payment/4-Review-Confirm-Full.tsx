@@ -100,9 +100,9 @@ const App = () => {
 
   const onClickEditBillingData = () => console.log('Calling onClicktEditBillingData...');
 
-  const onRenderNextStep = () => console.log('Calling onRenderNextStep...');
+  const onRenderNextStep = (currentStep: string) => console.log('Calling onRenderNextStep...', currentStep);
 
-  const onRenderPreviousStep = () => console.log('Calling onRenderNextStep...');
+  const onRenderPreviousStep = (currentStep: string) => console.log('Calling onRenderNextStep...', currentStep);
 
   return (
     <Payment

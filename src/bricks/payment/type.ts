@@ -26,8 +26,8 @@ export type TPaymentType = {
   onBinChange?: (param: string) => void;
   onClickEditShippingData?: () => void;
   onClickEditBillingData?: () => void;
-  onRenderNextStep?: (param: string) => void;
-  onRenderPreviousStep?: (param: string) => void;
+  onRenderNextStep?: (currentStep: string) => void;
+  onRenderPreviousStep?: (currentStep: string) => void;
 
   /**
    * Non-optional. Object containing initialization options.
