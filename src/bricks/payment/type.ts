@@ -640,7 +640,7 @@ export interface IPayerAddressAPI {
    *
    * @see {@link https://www.mercadopago.com/developers/en/docs/checkout-bricks/payment-brick/additional-customization/initialize-data-on-the-bricks Payer data} documentation.
    */
-  street_number: number;
+  street_number: string;
 }
 
 export interface IAdditionalData {
