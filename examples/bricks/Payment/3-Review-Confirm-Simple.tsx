@@ -32,10 +32,7 @@ const App = () => {
     },
   };
 
-  const onSubmit = async (param) => {
-    console.log(param);
-  }
-
+  const onSubmit = async () => console.log('Calling onSubmit');
 
   return (
     <Payment
