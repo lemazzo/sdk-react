@@ -72,12 +72,12 @@ export type TPaymentType = {
    */
   locale?: string;
 };
-interface IReviewConfirmItems {
+export interface IReviewConfirmItems {
   totalItemsAmount: number;
   itemsList: IListItems[];
 }
 
-interface IListItems {
+export interface IListItems {
   units: number;
   value: number;
   name: string;
@@ -85,14 +85,14 @@ interface IListItems {
   imageURL?: string;
 }
 
-interface IReviewConfirmShipping {
+export interface IReviewConfirmShipping {
   costs?: number;
   shippingMode: string;
   description?: string;
   receiverAddress: IReceiverAddress;
 }
 
-interface IReceiverAddress {
+export interface IReceiverAddress {
   streetName: string;
   streetNumber: string;
   neighborhood?: string;
@@ -101,7 +101,7 @@ interface IReceiverAddress {
   zipCode: string;
 }
 
-interface IReviewConfirmBilling {
+export interface IReviewConfirmBilling {
   firstName?: string;
   lastName?: string;
   taxRegime?: string;
@@ -110,11 +110,11 @@ interface IReviewConfirmBilling {
   billingAddress?: IBillingAddress;
 }
 
-interface IIidentification {
+export interface IIidentification {
   type: string;
   number: string;
 }
-interface IBillingAddress {
+export interface IBillingAddress {
   streetName: string,
   streetNumber: string,
   neighborhood?: string,
@@ -122,16 +122,16 @@ interface IBillingAddress {
   federalUnit?: string,
   zipCode: string,
 }
-interface IReviewConfirmDiscounts {
+export interface IReviewConfirmDiscounts {
   totalDiscountsAmount: number,
   discountsList: IDiscountsList[],
 }
-interface IDiscountsList {
+export interface IDiscountsList {
   name: string,
   value: number,
 }
 
-interface IPaymentFormData {
+export interface IPaymentFormData {
   /**
    * Non-optional. Payment type returned at onSubmit.
    *
@@ -160,7 +160,7 @@ interface IPaymentFormData {
   additionalData?: IAdditionalData;
 }
 
-interface ISavedCardPayer {
+export interface ISavedCardPayer {
   /**
    * Non-optional. Saved cards type.
    *
@@ -175,12 +175,12 @@ interface ISavedCardPayer {
   id: string;
 }
 
-interface TransactionDetails {
+export interface TransactionDetails {
   /** Non-option. Financial institution */
   financial_institution: string;
 }
 
-interface Metadata {
+export interface Metadata {
   /**
    * Optional. Payment point is useful to show the buyer where to pay.
    */
@@ -191,7 +191,7 @@ interface Metadata {
   payment_mode?: string;
 }
 
-interface TicketFormData {
+export interface TicketFormData {
   /**
    * Non-optional. Ticket transaction amount.
    *
@@ -222,7 +222,7 @@ interface TicketFormData {
   metadata?: Metadata;
 }
 
-interface IPaymentBrickCustomization {
+export interface IPaymentBrickCustomization {
   /**
    * Optional. Control visual aspects of brick.
    *
@@ -261,11 +261,11 @@ type TPaymentBrickVisual = IPaymentBrickBaseVisual & IPaymentBrickVisual;
  *
  * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/payment.md Data customization} documentation.
  */
-interface IPaymentBrickBaseVisual
+export interface IPaymentBrickBaseVisual
   extends IBrickVisual<IPaymentBrickCustomizableTexts, IPaymentBrickStyle>,
     ICardPaymentBrickVisual {}
 
-interface IPaymentBrickVisual {
+export interface IPaymentBrickVisual {
   /**
    * Optional. Hide redirection form.
    *
@@ -345,7 +345,7 @@ type TPaymentBrickPaymentMethods = IPaymentBrickPaymentMethods &
 
 type AllOrArray = 'all' | string[];
 
-interface IPaymentBrickPaymentMethods {
+export interface IPaymentBrickPaymentMethods {
   /**
    * Optional. Customizable maximum number of installments to be offered to the user.
    *
@@ -379,7 +379,7 @@ interface IPaymentBrickPaymentMethods {
   };
 }
 
-interface ILabelPlaceholder {
+export interface ILabelPlaceholder {
   /**
    * Optional. Define custom label text.
    *
@@ -394,7 +394,7 @@ interface ILabelPlaceholder {
   placeholder?: string;
 }
 
-interface IPaymentBrickCustomizableTexts {
+export interface IPaymentBrickCustomizableTexts {
   /**
    * Optional. Custom payer label or placeholder first name.
    *
@@ -451,9 +451,9 @@ interface IPaymentBrickCustomizableTexts {
   addressComplement?: { label?: string };
 }
 
-interface IPaymentBrickStyle extends IBrickStyle<IPaymentBrickCustomVariables> {}
+export interface IPaymentBrickStyle extends IBrickStyle<IPaymentBrickCustomVariables> {}
 
-interface IPaymentBrickCustomVariables extends IBrickCustomVariables {
+export interface IPaymentBrickCustomVariables extends IBrickCustomVariables {
   /**
    * Optional. Custom variable
    *
@@ -464,7 +464,7 @@ interface IPaymentBrickCustomVariables extends IBrickCustomVariables {
 
 type EntityType = 'individual' | 'association';
 
-interface IPaymentBrickPayer extends ICardPaymentBrickPayer {
+export interface IPaymentBrickPayer extends ICardPaymentBrickPayer {
   /**
    * Optional. Payer first name that can start already filled in.
    *
@@ -503,7 +503,7 @@ interface IPaymentBrickPayer extends ICardPaymentBrickPayer {
   cardsIds?: string[];
 }
 
-interface IAddress {
+export interface IAddress {
   /**
    * Optional. Payer zip code that can start already filled in.
    *
@@ -565,7 +565,7 @@ type TPaymentBrickPaymentType =
   | 'wallet_purchase'
   | 'onboarding_credits';
 
-interface IPayerAPI {
+export interface IPayerAPI {
   /**
    *  Non-optional. Email of associated payer.
    *
@@ -604,7 +604,7 @@ interface IPayerAPI {
   entity_type?: EntityType;
 }
 
-interface IPayerAddressAPI {
+export interface IPayerAddressAPI {
   /**
    *  Non-optional. Zip code of associated payer.
    *
@@ -643,7 +643,7 @@ interface IPayerAddressAPI {
   street_number: number;
 }
 
-interface IAdditionalData {
+export interface IAdditionalData {
   /**
    *  Non-optional. Bin of card entered by user.
    *
