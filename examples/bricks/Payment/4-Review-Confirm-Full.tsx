@@ -17,7 +17,8 @@ const App = () => {
           value: 10,
           name: 'Product A',
           description: 'A description',
-          imageURL: 'https://http2.mlstatic.com/frontend-assets/mp-acq-home-landing/logo-mercadopago.jpg',
+          imageURL:
+            'https://http2.mlstatic.com/frontend-assets/mp-acq-home-landing/logo-mercadopago.jpg',
         },
         {
           units: 1,
@@ -44,7 +45,7 @@ const App = () => {
       },
       billingAddress: {
         streetName: '<STREET_NAME>',
-        streetNumber: 1234,
+        streetNumber: '1234',
         neighborhood: '<NEIGHBORHOOD>',
         city: '<CITY>',
         federalUnit: '<FEDERAL_UNIT>',
@@ -57,7 +58,7 @@ const App = () => {
       description: '1 day',
       receiverAddress: {
         streetName: '<STREET_NAME>',
-        streetNumber: 5678,
+        streetNumber: '5678',
         neighborhood: '<NEIGHBORHOOD>',
         city: '<CITY>',
         federalUnit: '<FEDERAL_UNIT>',
@@ -100,9 +101,11 @@ const App = () => {
 
   const onClickEditBillingData = () => console.log('Calling onClicktEditBillingData...');
 
-  const onRenderNextStep = (currentStep: string) => console.log('Calling onRenderNextStep...', currentStep);
+  const onRenderNextStep = (currentStep: string) =>
+    console.log('Calling onRenderNextStep...', currentStep);
 
-  const onRenderPreviousStep = (currentStep: string) => console.log('Calling onRenderPreviousStep...', currentStep);
+  const onRenderPreviousStep = (currentStep: string) =>
+    console.log('Calling onRenderPreviousStep...', currentStep);
 
   return (
     <Payment

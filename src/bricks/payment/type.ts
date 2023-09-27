@@ -104,7 +104,7 @@ export interface IDefaultAddress {
    *
    * @see {@link https://www.mercadopago.com/developers/en/docs/checkout-bricks/payment-brick/additional-customization/initialize-data-on-the-bricks Payer data} documentation.
    */
-  streetNumber: number;
+  streetNumber: string;
   /**
    * Optional. Payer neighborhood that can start already filled in.
    *
