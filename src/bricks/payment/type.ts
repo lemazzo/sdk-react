@@ -479,6 +479,7 @@ export interface IPaymentBrickCustomVariables extends IBrickCustomVariables {
    * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/payment.md Text customization} documentation.
    */
   secondaryColor?: string;
+  secondaryColorListItem?: string;
 }
 
 type EntityType = 'individual' | 'association';
