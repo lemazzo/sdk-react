@@ -261,7 +261,7 @@ export interface IAdditionalInfoShipments {
     state_name: string;
     city_name: string;
     street_name: string;
-    street_number: string;
+    street_number: number;
     apartment: string;
   };
 }
