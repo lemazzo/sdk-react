@@ -20,23 +20,21 @@ const App = () => {
     },
   };
 
-  const customization = {
-    enableReviewStep: true,
-    paymentMethods: {
-      atm: 'all',
-      ticket: 'all',
-      bankTransfer: ['pix'],
-      debitCard: 'all',
-      mercadoPago: 'all',
-    },
-  };
-
   const onSubmit = async () => console.log('Calling onSubmit');
 
   return (
     <Payment
       initialization={initialization}
-      customization={customization}
+      customization={{
+        enableReviewStep: true,
+        paymentMethods: {
+          atm: 'all',
+          ticket: 'all',
+          bankTransfer: 'all',
+          debitCard: 'all',
+          mercadoPago: 'all',
+        },
+      }}
       onSubmit={onSubmit}
     />
   );
