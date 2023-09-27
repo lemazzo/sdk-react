@@ -239,6 +239,31 @@ export interface TicketFormData {
    * Optional. Payment useful metadata.
    */
   metadata?: Metadata;
+  additional_info?: IAdditionalInfo;
+}
+
+export interface IAdditionalInfo {
+  items: IAdditionalInfoItems[];
+  shipments: IAdditionalInfoShipments;
+}
+
+export interface IAdditionalInfoItems {
+  unit_price: number;
+  quantity: number;
+  title: string;
+  description: string;
+  picture_url: string;
+}
+
+export interface IAdditionalInfoShipments {
+  receiver_address: {
+    zip_code: string;
+    state_name: string;
+    city_name: string;
+    street_name: string;
+    street_number: string;
+    apartment: string;
+  };
 }
 
 export interface IPaymentBrickCustomization {
