@@ -10,7 +10,7 @@ export type InstanceMercadoPagoType = {
 
 export type TCardPayment = {
   /**
-   * Non-optional. Function. Receives function to send the payment to backend
+   * Required. Function. Receives function to send the payment to backend
    *
    * @see {@link https://www.mercadopago.com/developers/en/docs/checkout-bricks/card-payment-brick/default-rendering Card Payment Brick # Default rendering} documentation.
    * @see {@link https://www.mercadopago.com/developers/en/docs/checkout-bricks/card-payment-brick/additional-customization/additional-data Card Payment Brick # Additional Settings # Additional data} documentatio to understand the second param.
@@ -45,11 +45,11 @@ export type TCardPayment = {
    */
   locale?: 'es-AR' | 'es-CL' | 'es-CO' | 'es-MX' | 'es-VE' | 'es-UY' | 'es-PE' | 'pt-BR' | 'en-US';
   /**
-   * Non-optional. Object. At minimun receive the amount atribute.
+   * Required. Object. At minimun receive the amount atribute.
    */
   initialization: {
     /**
-     * Non-optional. Number. Receives the value to be payed.
+     * Required. Number. Receives the value to be payed.
      */
     amount: number;
     /**
