@@ -20,7 +20,7 @@ export type InstanceMercadoPagoType = {
 };
 
 export type TPaymentType = {
-  onSubmit: (param: IPaymentFormData, param2?: IAdditionalData) => Promise<unknown>;
+  onSubmit: (param: IPaymentFormData, param2?: IAdditionalCardFormData | null) => Promise<unknown>;
   onReady?: () => void;
   onError?: (param: IBrickError) => void;
   onBinChange?: (param: string) => void;
@@ -170,7 +170,8 @@ export interface IPaymentFormData {
    */
   formData: ICardPaymentFormData<ICardPaymentBrickPayer> &
     ICardPaymentFormData<ISavedCardPayer> &
-    TicketFormData;
+    TicketFormData &
+    IFormDataAdditionalInfo;
   /**
    * Optional. Bin of the card entered by the user.
    *
@@ -239,6 +240,9 @@ export interface TicketFormData {
    * Optional. Payment useful metadata.
    */
   metadata?: Metadata;
+}
+
+export type IFormDataAdditionalInfo = {
   additional_info?: IAdditionalInfo;
 }
 
