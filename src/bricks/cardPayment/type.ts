@@ -166,6 +166,7 @@ export interface ICardPaymentFormData<ICardPaymentBrickPayer> {
    * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/card-payment.md additional data customization} documentation.
    */
   processing_mode?: string;
+  additional_info?: IAdditionalData;
 }
 
 export interface IAdditionalData {
@@ -175,6 +176,8 @@ export interface IAdditionalData {
    * @see {@link https://www.mercadopago.com/developers/en/docs/checkout-bricks/card-payment-brick/additional-customization/additional-data Card Payment Brick # Additional Settings # Additional data customization} documentation.
    */
   bin: string;
+  lastFourDigits: string;
+  cardholderName?: string;
 }
 
 /**
