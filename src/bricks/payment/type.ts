@@ -94,13 +94,13 @@ export interface IReviewConfirmShipping {
 
 export interface IDefaultAddress {
   /**
-   * Optional. Payer street name that can start already filled in.
+   * Non-optional. Payer street name that can start already filled in.
    *
    * @see {@link https://www.mercadopago.com/developers/en/docs/checkout-bricks/payment-brick/additional-customization/initialize-data-on-the-bricks Payer data} documentation.
    */
   streetName: string;
   /**
-   * Optional. Payer street number that can start already filled in.
+   * Non-optional. Payer street number that can start already filled in.
    *
    * @see {@link https://www.mercadopago.com/developers/en/docs/checkout-bricks/payment-brick/additional-customization/initialize-data-on-the-bricks Payer data} documentation.
    */
@@ -125,7 +125,7 @@ export interface IDefaultAddress {
    */
   federalUnit?: string;
   /**
-   * Optional. Payer zip code that can start already filled in.
+   * Non-optional. Payer zip code that can start already filled in.
    *
    * @see {@link https://www.mercadopago.com/developers/en/docs/checkout-bricks/payment-brick/additional-customization/initialize-data-on-the-bricks Payer data} documentation.
    */
