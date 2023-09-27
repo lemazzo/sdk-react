@@ -45,7 +45,7 @@ const App = () => {
       },
       billingAddress: {
         streetName: '<STREET_NAME>',
-        streetNumber: '1234',
+        streetNumber: '<STREET_NUMBER>',
         neighborhood: '<NEIGHBORHOOD>',
         city: '<CITY>',
         federalUnit: '<FEDERAL_UNIT>',
@@ -58,7 +58,7 @@ const App = () => {
       description: '1 day',
       receiverAddress: {
         streetName: '<STREET_NAME>',
-        streetNumber: '5678',
+        streetNumber: '<STREET_NUMBER>',
         neighborhood: '<NEIGHBORHOOD>',
         city: '<CITY>',
         federalUnit: '<FEDERAL_UNIT>',
