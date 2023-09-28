@@ -176,7 +176,7 @@ export interface IAdditionalData {
    */
   bin: string;
   /**
-   *  Required. Last forur digits of card entered by user.
+   *  Required. Last four digits of card entered by user.
    *
    * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#callbacks Callbacks} documentation.
    */

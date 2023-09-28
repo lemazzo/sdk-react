@@ -54,7 +54,7 @@ export type TPaymentType = {
      */
     preferenceId?: string;
     /**
-     * Required only for review step. Defines the ordered items.
+     * Optional. Required only for review step. Defines the ordered items.
      *
      * @tutorial {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#initialization Initialization} documentation.
      */
@@ -115,7 +115,7 @@ export interface IListItems {
    */
   units: number;
   /**
-   * Required. Value per a given item	.
+   * Required. Value per a given item.
    *
    * @tutorial {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#initialization Initialization Items} documentation.
    */
@@ -133,7 +133,7 @@ export interface IListItems {
    */
   description?: string;
   /**
-   * Optional. Array with the ordered items.
+   * Optional. Item image.
    *
    * @tutorial {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#initialization Initialization Items} documentation.
    */
@@ -871,7 +871,7 @@ export interface IAdditionalData {
    */
   bin: string;
   /**
-   *  Required. Last forur digits of card entered by user.
+   *  Required. Last four digits of card entered by user.
    *
    * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/card-payment.md#callbacks Callbacks} documentation.
    */
