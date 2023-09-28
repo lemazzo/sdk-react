@@ -175,7 +175,17 @@ export interface IAdditionalData {
    * @see {@link https://www.mercadopago.com/developers/en/docs/checkout-bricks/card-payment-brick/additional-customization/additional-data Card Payment Brick # Additional Settings # Additional data customization} documentation.
    */
   bin: string;
+  /**
+   *  Required. Last forur digits of card entered by user.
+   *
+   * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#callbacks Callbacks} documentation.
+   */
   lastFourDigits: string;
+  /**
+   *  Optional. Cardholder name of card entered by user.
+   *
+   * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#callbacks Callbacks} documentation.
+   */
   cardholderName?: string;
 }
 
