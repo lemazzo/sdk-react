@@ -377,7 +377,6 @@ export type IFormDataAdditionalInfo = {
   /**
    * Optional. Additional information returned at onSubmit.
    *
-   * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#callbacks Callbacks} documentation.
    */
   additional_info?: IAdditionalInfo;
 };
@@ -438,39 +437,33 @@ export interface IAdditionalInfoShipments {
    */
   receiver_address: {
     /**
-     * Optional. Zip code returned at onSubmit.
+     * Required. Zip code returned at onSubmit.
      *
-     * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#callbacks Callbacks} documentation.
      */
-    zip_code?: string;
+    zip_code: string;
     /**
      * Optional. State name returned at onSubmit.
      *
-     * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#callbacks Callbacks} documentation.
      */
     state_name?: string;
     /**
      * Optional. City name returned at onSubmit.
      *
-     * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#callbacks Callbacks} documentation.
      */
     city_name?: string;
     /**
-     * Optional. Street name returned at onSubmit.
+     * Required. Street name returned at onSubmit.
      *
-     * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#callbacks Callbacks} documentation.
      */
-    street_name?: string;
+    street_name: string;
     /**
-     * Optional. Street number returned at onSubmit.
+     * Required. Street number returned at onSubmit.
      *
-     * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#callbacks Callbacks} documentation.
      */
-    street_number?: number;
+    street_number: number;
     /**
      * Optional. Apartment returned at onSubmit.
      *
-     * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#callbacks Callbacks} documentation.
      */
     apartment?: string;
   };
@@ -503,11 +496,6 @@ export interface IPaymentBrickCustomization {
   reviewCardsOrder?: string[];
 }
 
-/**
- * Required. Control the visual aspects of the brick.
- *
- * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/payment.md Data customization} documentation.
- */
 type TPaymentBrickVisual = IPaymentBrickBaseVisual & IPaymentBrickVisual;
 
 /**
@@ -877,7 +865,7 @@ export interface IAdditionalData {
   /**
    *  Required. Last four digits of card entered by user.
    *
-   * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/card-payment.md#callbacks Callbacks} documentation.
+   * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/payment.md#callbacks Callbacks} documentation.
    */
   lastFourDigits: string;
 }
@@ -886,7 +874,7 @@ export interface IAdditionalCardFormData extends IAdditionalData {
   /**
    *  Optional. Cardholder name of card entered by user.
    *
-   * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/card-payment.md#callbacks Callbacks} documentation.
+   * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/payment.md#callbacks Callbacks} documentation.
    */
   cardholderName?: string;
 }
