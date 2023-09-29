@@ -79,11 +79,11 @@ export type TPaymentType = {
     discounts?: IReviewConfirmDiscounts;
   };
   /**
-   * Required. An object containing customization brick options.
+   * Optional. An object containing customization brick options.
    *
    * @see {@link https://www.mercadopago.com/developers/en/docs/checkout-bricks/payment-brick/default-rendering Payment Brick # Default rendering} documentation.
    */
-  customization: IPaymentBrickCustomization;
+  customization?: IPaymentBrickCustomization;
   /**
    * Optional. Language selection for the Brick, options are:
    * {pt, es, es-AR, es-MX, es-UY, es-PE, es-CL, es-CO, en}
@@ -148,8 +148,9 @@ export interface IReviewConfirmShipping {
    */
   costs?: number;
   /**
-   * Required. The type of shipping. Example: Express.
+   * Required. The type of shipping.
    *
+   * @example shippingMode: 'Express'
    * @tutorial {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#initialization Initialization Shipping} documentation.
    */
   shippingMode: string;
@@ -221,8 +222,9 @@ export interface IReviewConfirmBilling {
    */
   lastName?: string;
   /**
-   * Optional. The tax regime. Example: Simplified Trust Regime.
+   * Optional. The tax regime.
    *
+   * @example taxRegime?: 'Simplified Trust Regime'
    * @tutorial {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#initialization Initialization Billing} documentation.
    */
   taxRegime?: string;
@@ -262,14 +264,16 @@ export interface IReviewConfirmDiscounts {
 }
 export interface IDiscountsList {
   /**
-   * Required. Discount name. Example: BLACKFRIDAY10.
+   * Required. Discount name.
    *
+   * @example name: 'BLACKFRIDAY10'
    * @tutorial {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#initialization Initialization Discounts} documentation.
    */
   name: string;
   /**
-   * Required. Discount value: Example: 10.
+   * Required. Discount value.
    *
+   * @example value: 10
    * @tutorial {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#initialization Initialization Discounts} documentation.
    */
   value: number;
@@ -486,7 +490,7 @@ export interface IPaymentBrickCustomization {
    */
   paymentMethods: TPaymentBrickPaymentMethods;
   /**
-   * Required. Enable review and confirm feature.
+   * Optional. Enable review and confirm feature.
    *
    * @see {@link https://github.com/mercadopago/sdk-js/blob/main/API/bricks/paymentReview.md#full-example-with-review-and-confirmation-steps} documentation.
    */
