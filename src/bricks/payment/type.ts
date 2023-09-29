@@ -440,7 +440,7 @@ export interface IAdditionalInfoShipments {
      * Required. Zip code returned at onSubmit.
      *
      */
-    zip_code: string;
+    zip_code?: string;
     /**
      * Optional. State name returned at onSubmit.
      *
@@ -455,12 +455,12 @@ export interface IAdditionalInfoShipments {
      * Required. Street name returned at onSubmit.
      *
      */
-    street_name: string;
+    street_name?: string;
     /**
      * Required. Street number returned at onSubmit.
      *
      */
-    street_number: number;
+    street_number?: number;
     /**
      * Optional. Apartment returned at onSubmit.
      *
