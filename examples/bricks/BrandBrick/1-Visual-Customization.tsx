@@ -12,7 +12,6 @@ const ExampleSimpleBrandBrick = () => {
     <Brand
       customization={{
         text: {
-          align: 'center',
           valueProp: 'payment_methods_logos',
           useCustomFont: true,
           size: 'large',
