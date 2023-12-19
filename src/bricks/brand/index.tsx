@@ -30,7 +30,7 @@ const Brand = ({
   locale,
 }: TBrand) => {
   useEffect(() => {
-    // CardPayment uses a debounce to prevent unnecessary reRenders.
+    // Brand uses a debounce to prevent unnecessary reRenders.
     let timer: ReturnType<typeof setTimeout>;
     const BrandBrickConfig = {
       settings: {
