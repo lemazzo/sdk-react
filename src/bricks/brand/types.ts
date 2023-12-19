@@ -8,7 +8,7 @@ export type TBrand = {
   /**
    * Optional. Function. Receives function to be executed just after brick rendered.
    *
-   * @see {@link https://mercadopago.com.ar/developers/en/docs/checkout-bricks/brand-brick/callbacksBrand Brick # Callbacks} documentation.
+   * @see {@link https://www.mercadopago.com.ar/developers/en/docs/checkout-bricks/brand-brick/callbacks Brick # Callbacks} documentation.
    */
   onReady?: () => void;
   /**
