@@ -19,7 +19,7 @@ Brand Brick communicates to the user advantages, conveniences, and information, 
 
 ## How it works
 
-This is like a wrapper for the Brick. It breaks the main characterists - customizations and callback - in _props_ for the component. In this way it possible have a minimum impact if the Bricks change and take advantage of the already existent documentation.
+This is like a wrapper for the Brick. It breaks the main characteristics - customizations and callback - in _props_ for the component. In this way, it is possible to minimize the impact if the Bricks change and take advantage of the already existent documentation.
 
 ---
 
